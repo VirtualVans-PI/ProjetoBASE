@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Controle de presença | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="presencas">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item " href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item active" href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item " href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item " href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item " href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item " href="configuracoes.html"><span
+                        class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Controle de presença</h1>
+                        <p>Atualize a situação dos alunos em cada viagem.</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table id=tabela-presencas>
+                        <thead>
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Período</th>
+                                <th>Escola</th>
+                                <th>Presença</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Maria Eduarda Santos</strong></td>
+                                <td>Manhã</td>
+                                <td>Escola Futuro Brilhante</td>
+                                <td><select class="field presence-select" data-id="1">
+                                        <option value="undefined">Não informado</option>
+                                        <option value="confirmed" selected>Confirmado</option>
+                                        <option value="absent">Ausente</option>
+                                        <option value="suspended">Suspenso</option>
+                                        <option value="goOnly">Só ida</option>
+                                        <option value="returnOnly">Só volta</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><strong>João Pedro da Silva</strong></td>
+                                <td>Tarde</td>
+                                <td>Escola Horizonte</td>
+                                <td><select class="field presence-select" data-id="2">
+                                        <option value="undefined">Não informado</option>
+                                        <option value="confirmed" selected>Confirmado</option>
+                                        <option value="absent">Ausente</option>
+                                        <option value="suspended">Suspenso</option>
+                                        <option value="goOnly">Só ida</option>
+                                        <option value="returnOnly">Só volta</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ana Clara Souza</strong></td>
+                                <td>Manhã</td>
+                                <td>Escola Futuro Brilhante</td>
+                                <td><select class="field presence-select" data-id="3">
+                                        <option value="undefined">Não informado</option>
+                                        <option value="confirmed">Confirmado</option>
+                                        <option value="absent" selected>Ausente</option>
+                                        <option value="suspended">Suspenso</option>
+                                        <option value="goOnly">Só ida</option>
+                                        <option value="returnOnly">Só volta</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lucas Nascimento</strong></td>
+                                <td>Tarde</td>
+                                <td>Escola Horizonte</td>
+                                <td><select class="field presence-select" data-id="4">
+                                        <option value="undefined">Não informado</option>
+                                        <option value="confirmed" selected>Confirmado</option>
+                                        <option value="absent">Ausente</option>
+                                        <option value="suspended">Suspenso</option>
+                                        <option value="goOnly">Só ida</option>
+                                        <option value="returnOnly">Só volta</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pedro Henrique</strong></td>
+                                <td>Manhã</td>
+                                <td>Escola Horizonte</td>
+                                <td><select class="field presence-select" data-id="5">
+                                        <option value="undefined">Não informado</option>
+                                        <option value="confirmed">Confirmado</option>
+                                        <option value="absent">Ausente</option>
+                                        <option value="suspended">Suspenso</option>
+                                        <option value="goOnly" selected>Só ida</option>
+                                        <option value="returnOnly">Só volta</option>
+                                    </select></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
