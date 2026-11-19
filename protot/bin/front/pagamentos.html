@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Pagamentos | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="pagamentos">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item " href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item " href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item active" href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item " href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item " href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item " href="configuracoes.html"><span
+                        class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Pagamentos</h1>
+                        <p>Acompanhe as mensalidades e registre recebimentos.</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table id=tabela-pagamentos>
+                        <thead>
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Referência</th>
+                                <th>Vencimento</th>
+                                <th>Valor</th>
+                                <th>Situação</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maria Eduarda Santos</td>
+                                <td>Abril 2026</td>
+                                <td>2026-04-10</td>
+                                <td>R$ 250,00</td>
+                                <td><span class="badge overdue">Atrasado</span></td>
+                                <td><button type="button" class="link alternar-pagamento" data-id="p1">Marcar
+                                        pago</button></td>
+                            </tr>
+                            <tr>
+                                <td>Maria Eduarda Santos</td>
+                                <td>Março 2026</td>
+                                <td>2026-03-10</td>
+                                <td>R$ 250,00</td>
+                                <td><span class="badge paid">Pago</span></td>
+                                <td><button type="button" class="link alternar-pagamento" data-id="p2">Reabrir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>João Pedro da Silva</td>
+                                <td>Abril 2026</td>
+                                <td>2026-04-10</td>
+                                <td>R$ 250,00</td>
+                                <td><span class="badge paid">Pago</span></td>
+                                <td><button type="button" class="link alternar-pagamento" data-id="p3">Reabrir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ana Clara Souza</td>
+                                <td>Abril 2026</td>
+                                <td>2026-04-10</td>
+                                <td>R$ 250,00</td>
+                                <td><span class="badge overdue">Atrasado</span></td>
+                                <td><button type="button" class="link alternar-pagamento" data-id="p4">Marcar
+                                        pago</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <section class="card section">
+                    <h2>Registrar pagamento</h2>
+                    <form id="form-pagamento" class="formgrid">
+                        <div class="formgroup"><label for="studentId">Aluno</label><select id="studentId"
+                                name="studentId" class="field" required>
+                                <option value="1">Maria Eduarda Santos</option>
+                                <option value="2">João Pedro da Silva</option>
+                                <option value="3">Ana Clara Souza</option>
+                                <option value="4">Lucas Nascimento</option>
+                                <option value="5">Pedro Henrique</option>
+                            </select></div>
+                        <div class="formgroup"><label for="amount">Valor (R$)</label><input id="amount" name="amount"
+                                type="number" min="0.01" step="0.01" class="field" required></div>
+                        <div class="formgroup"><label for="month">Referência</label><input id="month" name="month"
+                                class="field" placeholder="Outubro 2026" required></div>
+                        <div class="formgroup"><label for="dueDate">Vencimento</label><input id="dueDate" name="dueDate"
+                                type="date" class="field" required></div>
+                        <div class="span2"><button class="btn primary" type="submit">Registrar</button></div>
+                    </form>
+                </section>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Configurações | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="configuracoes">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item " href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item " href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item " href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item " href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item " href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item active"
+                    href="configuracoes.html"><span class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Configurações</h1>
+                        <p>Defina os valores padrão das mensalidades.</p>
+                    </div>
+                </div>
+                <form id="form-config" class="card">
+                    <h2>Mensalidades</h2>
+                    <div class="formgrid">
+                        <div class="formgroup"><label for="defaultFee">Valor padrão (R$)</label><input class="field"
+                                type="number" min="0" step="0.01" id="defaultFee" name="defaultFee" value="250"
+                                required></div>
+                        <div class="formgroup"><label for="dueDay">Dia de vencimento</label><input class="field"
+                                type="number" min="1" max="31" id="dueDay" name="dueDay" value="10" required></div>
+                        <div class="formgroup"><label for="installments">Quantidade de parcelas</label><input
+                                class="field" type="number" min="1" id="installments" name="installments" value="12"
+                                required></div>
+                    </div>
+                    <div class="actions"><button class="btn primary">Salvar configurações</button></div>
+                </form>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

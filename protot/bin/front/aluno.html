@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Cadastro do aluno | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="aluno">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item " href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item " href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item " href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item " href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item " href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item " href="configuracoes.html"><span
+                        class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Cadastro do aluno</h1>
+                        <p>Preencha ou atualize as informações do estudante.</p>
+                    </div>
+                </div>
+                <form class="card" id="form-aluno">
+                    <h2>Dados do aluno e responsável</h2>
+                    <div class="formgrid">
+                        <div class="formgroup"><label for="name">Nome completo</label><input class="field" id="name"
+                                name="name" type="text" required></div>
+                        <div class="formgroup"><label for="school">Escola</label><input class="field" id="school"
+                                name="school" type="text" required></div>
+                        <div class="formgroup"><label for="grade">Série / ano</label><input class="field" id="grade"
+                                name="grade" type="text"></div>
+                        <div class="formgroup"><label for="period">Período</label><select class="field" name="period"
+                                id="period">
+                                <option>Manhã</option>
+                                <option>Tarde</option>
+                                <option>Noite</option>
+                            </select></div>
+                        <div class="formgroup"><label for="address">Endereço</label><input class="field" id="address"
+                                name="address" type="text"></div>
+                        <div class="formgroup"><label for="neighborhood">Bairro</label><input class="field"
+                                id="neighborhood" name="neighborhood" type="text"></div>
+                        <div class="formgroup"><label for="cep">CEP</label><input class="field" id="cep" name="cep"
+                                type="text"></div>
+                        <div class="formgroup"><label for="reference">Ponto de referência</label><input class="field"
+                                id="reference" name="reference" type="text"></div>
+                        <div class="formgroup"><label for="parentName">Nome do responsável</label><input class="field"
+                                id="parentName" name="parentName" type="text" required></div>
+                        <div class="formgroup"><label for="parentPhone">Telefone</label><input class="field"
+                                id="parentPhone" name="parentPhone" type="tel"></div>
+                        <div class="formgroup"><label for="parentCPF">CPF</label><input class="field" id="parentCPF"
+                                name="parentCPF" type="text"></div>
+                        <div class="formgroup"><label for="email">E-mail</label><input class="field" id="email"
+                                name="email" type="email"></div>
+                        <div class="formgroup"><label for="contractNumber">Número do contrato</label><input
+                                class="field" id="contractNumber" name="contractNumber" type="text"></div>
+                        <div class="formgroup"><label for="monthlyFee">Mensalidade (R$)</label><input class="field"
+                                id="monthlyFee" name="monthlyFee" type="number" required min=0 step=0.01></div>
+                        <div class="formgroup"><label for="paymentStatus">Situação financeira</label><select
+                                class="field" name="paymentStatus" id="paymentStatus">
+                                <option value="pending">Pendente</option>
+                                <option value="paid">Pago</option>
+                                <option value="overdue">Atrasado</option>
+                            </select></div>
+                    </div>
+                    <div class="actions"><a class="btn" href="alunos.html">Cancelar</a><button class="btn primary"
+                            type="submit">Salvar cadastro</button><button class="btn danger" type="button"
+                            id="excluir-aluno" hidden>Excluir aluno</button></div>
+                </form>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

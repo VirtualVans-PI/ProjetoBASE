@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Alunos | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="alunos">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item active" href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item " href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item " href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item " href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item " href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item " href="configuracoes.html"><span
+                        class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Alunos</h1>
+                        <p>Consulte e organize os cadastros de estudantes.</p>
+                    </div><a class="btn primary" href="aluno.html">+ Cadastrar aluno</a>
+                </div>
+                <div class="toolbar"><input class="field" type="search" id="busca-alunos"
+                        placeholder="Buscar aluno, escola ou responsável"><select class="field" id="filtro-periodo">
+                        <option value="">Todos os períodos</option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select></div>
+                <div class="table-wrap">
+                    <table id=tabela-alunos>
+                        <thead>
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Escola</th>
+                                <th>Período</th>
+                                <th>Mensalidade</th>
+                                <th>Situação</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Maria Eduarda Santos</strong>
+                                    <div class="mini">5° Ano</div>
+                                </td>
+                                <td>Escola Futuro Brilhante</td>
+                                <td>Manhã</td>
+                                <td>R$ 250,00</td>
+                                <td><span class="badge overdue">Atrasado</span></td>
+                                <td><a class="link" href="aluno.html?id=1">Detalhes →</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>João Pedro da Silva</strong>
+                                    <div class="mini">7° Ano</div>
+                                </td>
+                                <td>Escola Horizonte</td>
+                                <td>Tarde</td>
+                                <td>R$ 250,00</td>
+                                <td><span class="badge paid">Pago</span></td>
+                                <td><a class="link" href="aluno.html?id=2">Detalhes →</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ana Clara Souza</strong>
+                                    <div class="mini">6° Ano</div>
+                                </td>
+                                <td>Escola Futuro Brilhante</td>
+                                <td>Manhã</td>
+                                <td>R$ 300,00</td>
+                                <td><span class="badge overdue">Atrasado</span></td>
+                                <td><a class="link" href="aluno.html?id=3">Detalhes →</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lucas Nascimento</strong>
+                                    <div class="mini">8° Ano</div>
+                                </td>
+                                <td>Escola Horizonte</td>
+                                <td>Tarde</td>
+                                <td>R$ 280,00</td>
+                                <td><span class="badge paid">Pago</span></td>
+                                <td><a class="link" href="aluno.html?id=4">Detalhes →</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pedro Henrique</strong>
+                                    <div class="mini">9° Ano</div>
+                                </td>
+                                <td>Escola Horizonte</td>
+                                <td>Manhã</td>
+                                <td>R$ 220,00</td>
+                                <td><span class="badge paid">Pago</span></td>
+                                <td><a class="link" href="aluno.html?id=5">Detalhes →</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

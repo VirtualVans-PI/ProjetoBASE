@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Vans e motoristas | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--EXECUTAR SEMPRE SYNCADO!!!!!-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+    <!--EXECUTAR SEMPRE SYNCADO!!!!!-->
+
+</head>
+
+<body data-page="vans">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item " href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item " href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item " href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item active" href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item " href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item " href="configuracoes.html"><span
+                        class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Vans e motoristas</h1>
+                        <p>Consulte os veículos utilizados no transporte escolar.</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table id="tabela-vans">
+                        <thead>
+                            <tr>
+                                <th>Veículo</th>
+                                <th>Placa</th>
+                                <th>Modelo</th>
+                                <th>Motorista</th>
+                                <th>Lugares</th>
+                                <th>Contato</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-vans"></tbody>
+                    </table>
+                </div>
+                <section class="card section">
+                    <h2>Cadastrar veículo</h2>
+                    <form id="form-van" class="formgrid">
+                        <div class="formgroup"><label for="name">Identificação</label><input class="field" id="name"
+                                name="name" type="text" required></div>
+
+                        <div class="formgroup"><label for="plate">Placa</label><input class="field" id="plate"
+                                name="plate" type="text" required></div>
+
+                        <div class="formgroup"><label for="model">Modelo</label><input class="field" id="model"
+                                name="model" type="text" required></div>
+
+                        <div class="formgroup"><label for="driver">Motorista</label><input class="field" id="driver"
+                                name="driver" type="text" required></div>
+
+                        <div class="formgroup"><label for="capacity">Capacidade</label><input class="field"
+                                id="capacity" name="capacity" type="number" required></div>
+
+                        <div class="formgroup"><label for="phone">Telefone</label><input class="field" id="phone"
+                                name="phone" type="tel"></div>
+
+                        <div class="span2"><button class="btn primary" type="submit">Cadastrar van</button></div>
+                        
+                    </form>
+                </section>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    
+     <!--EXECUTAR SEMPRE SYNCADO!!!!!-->
+    <script src="CadastroVansBD/BDVans.js"></script>
+     <!--EXECUTAR SEMPRE SYNCADO!!!!!-->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

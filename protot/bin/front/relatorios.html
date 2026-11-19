@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="VirtualVans - gestão de transporte escolar">
+    <title>Relatórios | VirtualVans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="relatorios">
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="painel.html"><span class="brand-icon">▣</span>VirtualVans</a>
+            <div class="nav-label">MENU PRINCIPAL</div>
+            <nav aria-label="Menu principal"><a class="nav-item " href="painel.html"><span
+                        class="nav-icon">▦</span>Painel</a><a class="nav-item " href="alunos.html"><span
+                        class="nav-icon">♙</span>Alunos</a><a class="nav-item " href="presencas.html"><span
+                        class="nav-icon">☑</span>Presenças</a><a class="nav-item " href="rotas.html"><span
+                        class="nav-icon">⇄</span>Rotas</a><a class="nav-item " href="pagamentos.html"><span
+                        class="nav-icon">＄</span>Pagamentos</a><a class="nav-item " href="vans.html"><span
+                        class="nav-icon">▣</span>Vans</a><a class="nav-item active" href="relatorios.html"><span
+                        class="nav-icon">▤</span>Relatórios</a><a class="nav-item " href="configuracoes.html"><span
+                        class="nav-icon">⚙</span>Configurações</a><a class="nav-item "
+                    href="nota-promissoria.html"><span class="nav-icon">▤</span>Nota promissória</a></nav>
+            <div class="sidebar-foot"><a href="index.html">← Sair do painel</a></div>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button type="button" class="btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+                <div><strong>Gestão de transporte escolar</strong><br><small>Ambiente de demonstração</small></div>
+                <div class="profile"><span>Administrador</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="pagehead">
+                    <div>
+                        <h1>Relatórios</h1>
+                        <p>Visualize os registros e exporte os dados para planilhas.</p>
+                    </div>
+                </div>
+                <section class="grid">
+                    <article class="card"><span class="stat-icon">♙</span>
+                        <div class="stat-label">Alunos</div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-foot">Cadastros ativos</div>
+                    </article>
+                    <article class="card"><span class="stat-icon">＄</span>
+                        <div class="stat-label">Pagamentos</div>
+                        <div class="stat-value">4</div>
+                        <div class="stat-foot">Lançamentos</div>
+                    </article>
+                    <article class="card"><span class="stat-icon">▣</span>
+                        <div class="stat-label">Vans</div>
+                        <div class="stat-value">1</div>
+                        <div class="stat-foot">Veículos</div>
+                    </article>
+                    <article class="card"><span class="stat-icon">⇄</span>
+                        <div class="stat-label">Turnos</div>
+                        <div class="stat-value">3</div>
+                        <div class="stat-foot">Manhã, tarde e noite</div>
+                    </article>
+                </section>
+                <section class="card section">
+                    <h2>Exportação de dados</h2>
+                    <p>Baixe os registros em formato CSV.</p>
+                    <div class="page-links section"><button class="btn primary exportar" data-tipo="students">Exportar
+                            alunos</button><button class="btn exportar" data-tipo="payments">Exportar
+                            pagamentos</button><button class="btn exportar" data-tipo="vans">Exportar vans</button>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">VirtualVans · Sistema demonstrativo</footer>
+        </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
