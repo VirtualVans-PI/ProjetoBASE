@@ -68,8 +68,4 @@ A decisão comunicada em 28/10/2026 aprova o **conteúdo já existente** que est
 | Critérios de aceitação catalogados | 619 |
 | Achados de auditoria identificados | 20 |
 
-**Riscos conhecidos:** declaração incorreta de embarque a partir do GPS; ausência de pessoa autorizada no desembarque; aluno não localizado na escola; indisponibilidade/duplicidade na confirmação financeira ou notificações; divergências entre lançamentos offline e correções administrativas; exposição de dados sensíveis de crianças e localização; limites de desempenho e continuidade não quantificados.
-
-**Decisões pendentes:** tratadas em `OPEN_QUESTIONS.md` e vinculadas aos achados `AUD`. O aceite do documento não determina valores para limiares, critérios operacionais, proteção de dados ou fluxo exato de confirmação de presença. Também exige recuperação dos enunciados de BR-117, BR-266 e BR-267, que não foram considerados materialmente aprovados.
-
-**Condições para a próxima fase:** resolver ou assumir formalmente os riscos/questões bloqueantes, revisar os AC genéricos para testabilidade, validar fluxos excepcionais e permissões, concluir as relações causais de rastreabilidade e registrar solicitação explícita de mudança de fase. **A fase permanece Discovery.**
+Disponivel para acesso em: https://virtualvans-pi.github.io/ProjetoBASE/protot/
