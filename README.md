@@ -68,4 +68,4 @@ A decisão comunicada em 28/10/2026 aprova o **conteúdo já existente** que est
 | Critérios de aceitação catalogados | 619 |
 | Achados de auditoria identificados | 20 |
 
-Disponivel em: https://virtualvans-pi.github.io/ProjetoBASE/protot/
+Disponivel para acesso em: https://virtualvans-pi.github.io/ProjetoBASE/protot/
