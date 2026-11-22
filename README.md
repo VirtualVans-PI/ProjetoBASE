@@ -72,7 +72,7 @@ Disponivel para acesso em: https://virtualvans-pi.github.io/ProjetoBASE/protot/
 
 MEMBROS:
 Willen Favarin Ledo Conceição
-Email: willen.conceicao@aluno.cps.sp.gov.br 
+Email: willen.conceicao@aluno.cps.sp.gov.br
 Github: https://github.com/orgs/VirtualVans-PI/people/WillenFavarin
 
 Lucas Couto Daniel Nobre da Silva 
